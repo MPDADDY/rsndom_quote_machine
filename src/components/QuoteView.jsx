@@ -1,83 +1,49 @@
-// import React,{ useEffect } from 'react'
-// import fetchQuote  from '../features/quotes/quoteSlice'
-// import { useDispatch, useSelector } from 'react-redux'
+import React, {useEffect} from 'react'
+import {useDispatch ,useSelector } from 'react-redux';
+import { fetchQuote } from '../features/quotes/quoteSlice';
+import './QuoteViewStyles.css';
 
-// const QuoteView = () => {
-//     const quotes = useSelector((state) => state.quotes)
-//     const dispatch = useDispatch()
-//     useEffect(()=> {
-//         dispatch(fetchQuote())
-//     },[dispatch])
 
-//     console.log(quotes)
-    
-//     return (
-//         <div>
-//       <h1>my quotes</h1>
-//       <div>
-//       <h1>My quotes</h1>
-
-//       {quotes.loading ? (
-//         <p>Loading...</p>
-//       ) : quotes.error ? (
-//         <p>Error: {quotes.error}</p>
-//       ) : (
-//         <div>
-//           {quotes.map((quote) => (
-//             <div key={quote.id}>
-//               {/* Assuming each quote has an 'id' property */}
-//               <p>{quote.text}</p>
-//               <p>- {quote.author}</p>
-//             </div>
-//           ))}
-//         </div>
-//       )}
-//     </div>
-//     </div>
-//   )
-// }
-
-// export default QuoteView
-
-import React from 'react';
-// import fetchQuote from '../features/quotes/quoteSlice';
-// import { useDispatch, useSelector } from 'react-redux';
 
 const QuoteView = () => {
-  // const quotes = useSelector((state) => state.quotes);
-  // const dispatch = useDispatch();
+const quote = useSelector((state)=> state.quote.quote[0])
+const dispatch = useDispatch()
 
-  // useEffect(() => {
-  //   dispatch(fetchQuote());
-  // }, [dispatch]); // Dependency array ensures the effect runs only on mount
+useEffect(()=> {
+  dispatch(fetchQuote())
+},[dispatch])
 
-  // console.log(quotes);
+console.log(quote)
 
-  return (
-    <div>
-      <h1>My quotes</h1>
-    {/* <div>
-    {quotes.loading ? (
-        <p>Loading...</p>
-      ) : quotes.error ? (
-        <p>Error: {quotes.error}</p>
-      ) : (
+if (!quote || quote.length === 0) {
+  return <div>Loading...</div>;
+}
+return (
+  <div>
+    {quote.loading && <p>Loading...</p>}
+    {!quote.loading && quote.error ? <div>error: {quote.error}</div>: null}
+    {!quote.loading && quote.quote ?
+    (
+      <div className='quotebox' id="quote-box">
+        <h2 id="text"><span>&quot;</span>{quote.quote}</h2>
+        <p id="author">{quote.author}</p>
         <div>
-          {quotes.quote && (
-            <div>
-              {/* Assuming each quote has an 'id' property *}
-              <p>{quotes.quote.text}</p>
-              <p>- {quotes.quote.author}</p>
-            </div>
-          )}
+          <div>
+            <a id="tweet-quote" href="https://twitter.com/intent/tweet">tweet</a>
+          </div>
+          <div>
+            <button id="new-quote">New Quote</button>
+          </div>
         </div>
-      )}
-    </div> */}
-    </div>
-  );
-};
+      </div>
+    )
+    : null}
+  </div>
+)
+}
 
-export default QuoteView;
+export default QuoteView
+
 
 
 
