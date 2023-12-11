@@ -131,6 +131,9 @@ You can deploy this project using [GitHub Pages](https://pages.github.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Live Demo 
+
+View live Demo by clicking [GitHub Pages](https://mpdaddy.github.io/rsndom_quote_machine/)
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
