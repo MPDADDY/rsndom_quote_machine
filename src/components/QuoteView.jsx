@@ -14,6 +14,12 @@ useEffect(()=> {
   dispatch(fetchQuote())
 },[dispatch])
 
+const Handleclick = ()=> {
+    dispatch(fetchQuote())
+}
+
+
+
 console.log(quote)
 
 if (!quote || quote.length === 0) {
@@ -35,7 +41,7 @@ return (
             </a>
           </div>
           <div>
-            <button className='newQuote_button' id="new-quote">New Quote</button>
+            <button onClick={Handleclick} className='newQuote_button' id="new-quote">New Quote</button>
           </div>
         </div>
       </div>

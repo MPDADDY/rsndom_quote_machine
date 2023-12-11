@@ -27,6 +27,9 @@ svg {
     background: rgb(38, 1, 46);
     color: white;
 }
+.newQuote_button:active {
+    background-color: aliceblue;
+}
 
 .quote-footer {
     display: flex;
