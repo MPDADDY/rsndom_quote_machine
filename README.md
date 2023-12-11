@@ -133,7 +133,7 @@ You can deploy this project using [GitHub Pages](https://pages.github.com/)
 
 ### Live Demo 
 
-View live Demo by clicking [Random Quote Machine](https://mpdaddy.github.io/rsndom_quote_machine/)
+View live Demo by clicking(<a target="_blank" href="https://mpdaddy.github.io/rsndom_quote_machine/">Random Quote Machine</a>)
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
