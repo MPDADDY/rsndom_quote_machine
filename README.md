@@ -33,7 +33,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Bookstore <a name="about-project"></a>
+# 📖 Random Quote Machine <a name="about-project"></a>
 
 **Random Quote Machine**  is an app that displays a random quote and its author when the 'New Quote' button is clicked. The app also allows users to share the quote on Twitter.
 
@@ -133,7 +133,7 @@ You can deploy this project using [GitHub Pages](https://pages.github.com/)
 
 ### Live Demo 
 
-View live Demo by clicking [GitHub Pages](https://mpdaddy.github.io/rsndom_quote_machine/)
+View live Demo by clicking [Random Quote Machine](https://mpdaddy.github.io/rsndom_quote_machine/)
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
